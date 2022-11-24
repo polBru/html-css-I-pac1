@@ -15,18 +15,12 @@ body {
   color: #2a2a2a;
 }
 
-main, .nav-home{
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
   font-family: Roboto Slab;
-}
-
-.nav-home{
-  margin-top: 25px;
-  text-align: center;
-  list-style: inside;
 }
 
 .pg-header {
@@ -39,7 +33,6 @@ main, .nav-home{
 
   @media (min-width: 1025px) {
     display: flex;
-    position: relative;
     justify-content: space-between;
   }
 }
@@ -92,12 +85,23 @@ main, .nav-home{
   }
 }
 
+.hm-header {
+  @media (min-width: 320px) {
+    text-align: center;
+  }
+
+  @media (min-width: 1025px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .hm-nav{
   margin-top: 30px;
+  list-style: inside;
   text-align: center;
 
   ul{
-    padding-top: 10px;
     background-color: black;
     list-style-type: none;
     margin: 0;
@@ -115,7 +119,6 @@ main, .nav-home{
 
   a {
     font-family: sans-serif;
-    margin-right: 5px;
     outline: none;
     text-decoration: none;
     color: white;
@@ -126,39 +129,23 @@ main, .nav-home{
   }  
 } 
 
-.inner{
-  margin: auto;
-  margin-top: 20px;
-  width: 550px;
-  outline: solid white;
-  text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.726);
-
-  img{
-    padding-top: 20px;
-    width: 400px;
-    display: block;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-
-  > p{
-    margin: auto;
-    color: white;
-    width: 500px;
-    margin-bottom: 20px;
-    font-weight: 200;
-  }
-}
-
 .quote-container{
   padding: 10px;
 
   div{
     margin: auto;
-    width: 350px;
+    
     background-color: white;
     box-shadow: -6px 0px 0 var(--main);    
+
+    @media (min-width: 320px) {
+      max-width: none;
+      margin: 20px;
+    }
+  
+    @media (min-width: 1025px) {
+      max-width: 350px;
+    }
   }
 
   blockquote{
@@ -179,6 +166,7 @@ main, .nav-home{
 
   cite{
     font-style: normal;
+    margin-right: 10px;
   }
 }
 
@@ -269,33 +257,55 @@ main, .nav-home{
   }
 }
 
-.footer-home{
-  color: #f0f0f0;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-  position: absolute;
+.inner{
+  margin-top: 20px;
+  outline: solid white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.726);
 
-  background-color: black;  
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  color: white;
+  img{
+    padding-top: 20px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
 
-  p{
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-    margin-bottom: 6px;
+    @media screen and (min-width: 320px) {
+      max-width: none;
+    }
   
-      > a{
-        outline: none;
-        text-decoration: none;
-        color: white;
-      }
+    @media screen and (min-width: 1025px) {
+      width: 400px;
     } 
+  }
+
+  > p{    
+    color: white;  
+    font-weight: 200;  
+
+    @media screen and (min-width: 320px) {
+      max-width: none;
+      margin-bottom: 20px;
+      margin-right: 30px;
+    }
+  
+    @media screen and (min-width: 1025px) {
+      width: 500px;
+      margin: auto;
+      margin-bottom: 20px;
+    }  
+  }
+
+  @media screen and (min-width: 320px) {
+    max-width: none;
+  }
+
+  @media screen and (min-width: 1025px) {
+    width: 550px;
+  }  
+}
+
+.strong{
+  font-weight: bold;
 }
 
 .pg-footer {
