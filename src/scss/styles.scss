@@ -97,7 +97,7 @@ main {
 }
 
 .hm-nav{
-  margin-top: 30px;
+  margin-top: 20px;
   list-style: inside;
   text-align: center;
 
@@ -141,10 +141,6 @@ main {
     @media (min-width: 320px) {
       max-width: none;
       margin: 20px;
-    }
-  
-    @media (min-width: 1025px) {
-      max-width: 350px;
     }
   }
 
@@ -304,8 +300,85 @@ main {
   }  
 }
 
+.index {
+  padding-top: 10px;
+  list-style: inside;
+
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 320px) {
+    margin-right: none;
+  }
+
+  ul {
+    padding: 0;    
+  }
+  
+  li {
+    display: inline;       
+  }
+
+  a {
+    @media (min-width: 1025px) {
+      background-color: var(--main);
+      padding: 10px 20px;
+    } 
+  }
+
+  a:hover {
+    @media (min-width: 1025px) {
+      color: white;
+    }     
+  }
+
+  li:not(:last-child) { 
+    margin-right: 100px;
+
+    @media (min-width: 320px) {
+      margin-right: 20px;
+    }
+  
+    @media (min-width: 1025px) {
+      margin-right: 100px;
+    }
+  }
+}
+
+.p-image {  
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 320px) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 1025px) {
+    flex-direction: row;
+  }
+
+  p,
+  picture {
+    vertical-align: top;
+  }
+}
+
+.image{
+  > p{
+    margin: 0;
+    font-size: smaller;
+  }
+}
+
 .strong{
   font-weight: bold;
+}
+
+.related {
+  text-align: right;  
 }
 
 .pg-footer {
